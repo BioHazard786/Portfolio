@@ -25,29 +25,29 @@ function About() {
                 <FaAward className="about__icon" />
               </a>
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>2+ Years Coding</small>
             </article>
             <article className="about__card">
               <a href="">
                 <FiUsers className="about__icon" />
               </a>
-              <h5>Clients</h5>
-              <small>200+ Worldwide</small>
+              <h5>Education</h5>
+              <small>ICSE ISC BTech(4th year)</small>
             </article>
             <article className="about__card">
               <a href="">
                 <VscFolderLibrary className="about__icon" />
               </a>
               <h5>Projects</h5>
-              <small>80+ Completed</small>
+              <small>4+ Completed</small>
             </article>
           </div>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-            adipisci impedit sunt minima tenetur labore quis sed explicabo.
-            Cupiditate tempore minima animi laboriosam reiciendis eos. Eius
-            debitis magni dolore ut?
+            I am a Btech CSE student aspiring career in software engineering. My
+            strength is I am a self-motivated person and a positive thinker. My
+            Hobby is watching web series or movies and listening to music. My
+            strong points are Python and Javascript.
           </p>
 
           <a href="#contact" className="btn btn-primary">

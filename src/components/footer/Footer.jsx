@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer>
       <a href="#" className="footer__logo">
-        CuntSlayer
+        Mohd Zaid
       </a>
 
       <ul className="permalinks">
@@ -22,13 +22,7 @@ function Footer() {
           <a href="#experience">Experience</a>
         </li>
         <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
           <a href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a href="#testimonials">Testimonials</a>
         </li>
         <li>
           <a href="#contact">Contact</a>
@@ -48,7 +42,7 @@ function Footer() {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; CuntSlayer. All rights reserved.</small>
+        <small>&copy; Mohd Zaid. All rights reserved.</small>
       </div>
     </footer>
   );

@@ -15,15 +15,15 @@ function Contact() {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>dummymail@gmail.com</h5>
-            <a href="mailto:dummymail@gmail.com" target="_blank">
+            <h5>bzatch70@gmail.com</h5>
+            <a href="mailto:bzatch70@gmail.com" target="_blank">
               Send a message
             </a>
           </article>
           <article className="contact__option">
             <RiTelegramLine className="contact__option-icon telegram" />
             <h4>Telegram</h4>
-            <h5>CuntSlayer</h5>
+            <h5>Mohd Zaid</h5>
             <a href="https://t.me/lulu786" target="_blank">
               Send a message
             </a>
@@ -33,7 +33,7 @@ function Contact() {
             <h4>WhatsApp</h4>
             <h5>+91639663XXXX</h5>
             <a
-              href="https://api.whatsapp.com/send?phone=+916396634239"
+              href="https://api.whatsapp.com/send?phone=+916396634236"
               target="_blank"
             >
               Send a message
