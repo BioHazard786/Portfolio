@@ -1,11 +1,8 @@
 import React from "react";
 import "./portfolio.css";
-import IMG1 from "../../assets/portfolio1.jpg";
-import IMG2 from "../../assets/portfolio2.jpg";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
-import IMG5 from "../../assets/portfolio5.jpg";
-import IMG6 from "../../assets/portfolio6.jpg";
+import IMG1 from "../../assets/portfolio1.png";
+import IMG2 from "../../assets/portfolio2.png";
+import IMG3 from "../../assets/portfolio3.png";
 
 function Portfolio() {
   return (
@@ -18,15 +15,21 @@ function Portfolio() {
           <div className="portfolio__item-image">
             <img src={IMG1} alt="" />
           </div>
-          <h3>This is a portfolio item title</h3>
+          <h3>Music App</h3>
           <div className="portfolio__item-cta">
-            <a href="https://github.com" className="btn" target="_blank">
+            <a
+              href="https://github.com/BioHazard786/musical-lyriks"
+              className="btn"
+              target="_blank"
+              rel="noreferrer"
+            >
               Github
             </a>
             <a
-              href="https://dribbble.com/alien_pixels"
+              href="https://musical-lyriks.netlify.app/"
               className="btn btn-primary"
               target="_blank"
+              rel="noreferrer"
             >
               Live Demo
             </a>
@@ -36,15 +39,21 @@ function Portfolio() {
           <div className="portfolio__item-image">
             <img src={IMG2} alt="" />
           </div>
-          <h3>This is a portfolio item title</h3>
+          <h3>InternFreak Bot</h3>
           <div className="portfolio__item-cta">
-            <a href="https://github.com" className="btn" target="_blank">
+            <a
+              href="https://github.com/BioHazard786/InternFreak-Bot"
+              className="btn"
+              target="_blank"
+              rel="noreferrer"
+            >
               Github
             </a>
             <a
-              href="https://dribbble.com/alien_pixels"
+              href="https://t.me/internfreakposts"
               className="btn btn-primary"
               target="_blank"
+              rel="noreferrer"
             >
               Live Demo
             </a>
@@ -54,69 +63,21 @@ function Portfolio() {
           <div className="portfolio__item-image">
             <img src={IMG3} alt="" />
           </div>
-          <h3>This is a portfolio item title</h3>
+          <h3>Portfolio</h3>
           <div className="portfolio__item-cta">
-            <a href="https://github.com" className="btn" target="_blank">
-              Github
-            </a>
             <a
-              href="https://dribbble.com/alien_pixels"
-              className="btn btn-primary"
+              href="https://github.com/BioHazard786/Portfolio"
+              className="btn"
               target="_blank"
+              rel="noreferrer"
             >
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG4} alt="" />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com" className="btn" target="_blank">
               Github
             </a>
             <a
-              href="https://dribbble.com/alien_pixels"
+              href="https://zaid77-portfolio.netlify.app/"
               className="btn btn-primary"
               target="_blank"
-            >
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG5} alt="" />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com" className="btn" target="_blank">
-              Github
-            </a>
-            <a
-              href="https://dribbble.com/alien_pixels"
-              className="btn btn-primary"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG6} alt="" />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com" className="btn" target="_blank">
-              Github
-            </a>
-            <a
-              href="https://dribbble.com/alien_pixels"
-              className="btn btn-primary"
-              target="_blank"
+              rel="noreferrer"
             >
               Live Demo
             </a>
