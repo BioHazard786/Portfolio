@@ -2,7 +2,7 @@ import React from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/portfolio1.png";
 import IMG2 from "../../assets/portfolio2.png";
-import IMG3 from "../../assets/portfolio3.png";
+import IMG3 from "../../assets/portfolio4.png";
 
 function Portfolio() {
   return (
@@ -63,10 +63,10 @@ function Portfolio() {
           <div className="portfolio__item-image">
             <img src={IMG3} alt="" />
           </div>
-          <h3>Portfolio</h3>
+          <h3>Search Index</h3>
           <div className="portfolio__item-cta">
             <a
-              href="https://github.com/BioHazard786/Portfolio"
+              href="https://github.com/BioHazard786/Dump-Search-Index"
               className="btn"
               target="_blank"
               rel="noreferrer"
@@ -74,7 +74,7 @@ function Portfolio() {
               Github
             </a>
             <a
-              href="https://zaid77-portfolio.netlify.app/"
+              href="https://zaid-dump.netlify.app/"
               className="btn btn-primary"
               target="_blank"
               rel="noreferrer"
