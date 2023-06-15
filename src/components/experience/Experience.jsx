@@ -23,7 +23,7 @@ function Experience() {
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>CSS</h4>
-                <small className="text-light">Beginner</small>
+                <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="experience__details">
@@ -37,7 +37,7 @@ function Experience() {
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>React</h4>
-                <small className="text-light">Beginner</small>
+                <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="experience__details">
@@ -50,7 +50,7 @@ function Experience() {
             <article className="experience__details">
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
-                <h4>Three JS</h4>
+                <h4>Next JS</h4>
                 <small className="text-light">Beginner</small>
               </div>
             </article>
@@ -71,7 +71,7 @@ function Experience() {
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>MongoDB</h4>
-                <small className="text-light">Beginner</small>
+                <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="experience__details">
@@ -84,8 +84,8 @@ function Experience() {
             <article className="experience__details">
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
-                <h4>MySQL</h4>
-                <small className="text-light">Beginner</small>
+                <h4>Express JS</h4>
+                <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="experience__details">
