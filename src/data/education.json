@@ -5,8 +5,7 @@
     "tags": ["Dehradun", "Uttarakhand", "India"],
     "time": "2024 — Present",
     "instituteName": "Graphic Era Hill University",
-    "instituteLink": "https://gehu.ac.in/",
-    "location": "Dehradun, India"
+    "instituteLink": "https://gehu.ac.in/"
   },
   {
     "title": "Bachelor of Technology",
@@ -15,8 +14,7 @@
     "time": "2019 — 2023",
     "instituteName": "IIIT Sonepat",
     "instituteLink": "https://iiitsonepat.ac.in/",
-    "score": "8.7 CGPA",
-    "location": "Sonepat, India"
+    "score": "8.7 CGPA"
   },
   {
     "title": "Senior Secondary (Class XII)",
@@ -25,8 +23,7 @@
     "time": "2016 — 2018",
     "instituteName": "Carman School",
     "instituteLink": "https://www.carmanschool.com/",
-    "score": "9.3 CGPA / 93%",
-    "location": "Dehradun, India"
+    "score": "9.3 CGPA / 93%"
   },
   {
     "title": "Secondary (Class X)",
@@ -35,7 +32,6 @@
     "time": "Completed in 2016",
     "instituteName": "Carman School",
     "instituteLink": "https://www.carmanschool.com/",
-    "score": "8.3 CGPA / 83%",
-    "location": "Dehradun, India"
+    "score": "8.3 CGPA / 83%"
   }
 ]

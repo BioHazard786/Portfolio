@@ -1,4 +1,4 @@
-# 🌌 Zaid's Portfolio
+# 🌌 Mohd Zaid's Portfolio
 
 > Welcome to my digital playground — a handcrafted portfolio site where design meets code, and inspiration takes flight.
 
@@ -62,9 +62,23 @@ Then visit [localhost:4321](http://localhost:4321) in your browser.
 - **Body:** Inter
 - **Mono:** SF Mono
 
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## 📬 Contact
 
-Want to connect or collaborate? Reach out via the contact form on the site or find me on [LinkedIn](https://www.linkedin.com/).
+Want to connect or collaborate? Reach out via the contact form on the site or find me on [Telegram](https://t.me/LuLu786) - <message@zaid.qzz.io>.
+
+## Star History
+
+<a href="https://www.star-history.com/#BioHazard786/Portfolio&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=BioHazard786/Portfolio&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=BioHazard786/Portfolio&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=BioHazard786/Portfolio&type=Date" />
+ </picture>
+</a>
 
 ---
 

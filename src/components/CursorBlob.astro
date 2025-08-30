@@ -21,11 +21,20 @@
 <script>
   const blob = document.getElementById("blob");
 
-  window.addEventListener("pointermove", (event) => {
-    const { pageX, pageY } = event;
+  function isLargeScreen() {
+    return window.matchMedia("(min-width: 1024px)").matches;
+  }
 
-    // Update the CSS variables with the correct coordinates
-    blob!.style.setProperty("--x", pageX + "px");
-    blob!.style.setProperty("--y", pageY + "px");
+  window.addEventListener("pointermove", (event) => {
+    if (isLargeScreen()) {
+      const { pageX, pageY } = event;
+
+      // Update the CSS variables with the correct coordinates
+      blob!.style.setProperty("--x", pageX + "px");
+      blob!.style.setProperty("--y", pageY + "px");
+    } else {
+      blob!.style.setProperty("--x", "0");
+      blob!.style.setProperty("--y", "0");
+    }
   });
 </script>
