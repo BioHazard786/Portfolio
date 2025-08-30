@@ -1,0 +1,30 @@
+---
+import ExperienceCard from "@/components/ui/ExperienceCard.astro";
+import educationData from "@/data/education.json";
+---
+
+<section id="education" class="mb-16" aria-label="Education">
+  <h2
+    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif"
+  >
+    Academic Background
+  </h2>
+  <div>
+    <ol class="group/list">
+      {
+        educationData.map((item) => (
+          <ExperienceCard
+            title={item.title}
+            description={item.description}
+            tags={item.tags}
+            time={item.time}
+            companyName={item.instituteName}
+            companyLink={item.instituteLink}
+            position={item.score}
+            location={item.location}
+          />
+        ))
+      }
+    </ol>
+  </div>
+</section>

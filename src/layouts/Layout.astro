@@ -1,0 +1,57 @@
+---
+import AnimatedDots from "@/components/AnimatedDots.astro";
+import Blur from "@/components/Blur.astro";
+import CursorBlob from "@/components/CursorBlob.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zaid's portfolio – a handcrafted digital playground showcasing projects, experience, and creative experiments. Built with Astro & Tailwind CSS, deployed to Cloudflare Workers."
+    />
+    <meta name="author" content="Zaid" />
+    <meta
+      name="keywords"
+      content="portfolio, zaid, web developer, astro, tailwind, cloudflare, projects, resume, creative"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Explore Zaid's portfolio: projects, experience, and creative work. Inspired by Brittany Chang, Paco Coursey, and Anthony Fu."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zaid.qzz.io/" />
+    <meta property="og:image" content="/images/power.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta
+      name="twitter:description"
+      content="Explore Zaid's portfolio: projects, experience, and creative work. Inspired by Brittany Chang, Paco Coursey, and Anthony Fu."
+    />
+    <meta name="twitter:image" content="/images/power.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="antialiased font-sans bg-background text-primary">
+    <div class="group/spotlight relative">
+      <CursorBlob />
+      <Blur />
+      <div class="max-w-3xl mx-auto px-6 py-12 md:py-20">
+        <slot />
+      </div>
+      <AnimatedDots />
+    </div>
+  </body>
+</html>

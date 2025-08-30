@@ -1,0 +1,31 @@
+---
+// No server-side code needed
+---
+
+<div
+  id="blob"
+  class="pointer-events-none select-none fixed inset-0 z-30 transition duration-300 lg:absolute"
+>
+</div>
+
+<style>
+  #blob {
+    background: radial-gradient(
+      600px at var(--x) var(--y),
+      rgba(29, 78, 216, 0.15),
+      transparent 80%
+    );
+  }
+</style>
+
+<script>
+  const blob = document.getElementById("blob");
+
+  window.addEventListener("pointermove", (event) => {
+    const { pageX, pageY } = event;
+
+    // Update the CSS variables with the correct coordinates
+    blob!.style.setProperty("--x", pageX + "px");
+    blob!.style.setProperty("--y", pageY + "px");
+  });
+</script>

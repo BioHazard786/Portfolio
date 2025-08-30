@@ -1,0 +1,19 @@
+---
+export interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+  {
+    tags.map((tag) => (
+      <li class="mr-1.5 mt-2">
+        <div class="flex items-center rounded-full bg-accent-background/10 px-3 py-1 text-xs font-medium leading-5 text-accent ">
+          {tag}
+        </div>
+      </li>
+    ))
+  }
+</ul>

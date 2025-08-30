@@ -1,0 +1,123 @@
+---
+import BadgeList from "@/components/ui/BadgeList.astro";
+import ArrowUpRight from "@/assets/arrow-up-right.svg";
+import Star from "@/assets/star.svg";
+import Fork from "@/assets/fork.svg";
+import Download from "@/assets/download.svg";
+import { formatNumber } from "@/lib/formatters";
+
+export interface Props {
+  title: string;
+  link: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  github?: string;
+  tags?: string[];
+  year: number;
+  stars?: number;
+  forks?: number;
+  downloads?: number;
+}
+
+const {
+  title,
+  link,
+  description,
+  image,
+  imageAlt,
+  github,
+  tags,
+  year,
+  stars,
+  forks,
+  downloads,
+} = Astro.props;
+---
+
+<li class="mb-12">
+  <div
+    class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-9 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+  >
+    <div
+      class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+    >
+    </div>
+    <div class="z-10 sm:order-2 sm:col-span-7 relative">
+      <!-- <span
+        class="text-[8rem] text-muted absolute bottom-[50%] -right-[30%] text-stroke-[6px] opacity-10 inline select-none pointer-events-none leading-0"
+        >{year}</span
+      > -->
+      <h3 class="font-medium leading-tight font-serif text-lg">
+        <a
+          class="inline-flex items-baseline font-medium leading-tight hover:text-accent focus-visible:text-accent group/link"
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label={`${title} (opens in a new tab)`}
+        >
+          <span
+            class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+          ></span>
+          <span
+            >{title}
+            <span class="mx-1">·</span>
+            <span class="inline-block">
+              {year}
+              <ArrowUpRight
+                class="inline-block size-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5"
+              />
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p class="mt-2 text-sm leading-normal text-secondary">{description}</p>
+      <div class="mt-2 flex gap-4 text-tertiary">
+        <a
+          class="relative inline-flex items-center text-sm font-medium hover:text-accent focus-visible:text-accent"
+          href={github}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label={`${formatNumber(stars)} stars on GitHub (opens in a new tab)`}
+        >
+          <Star class="mr-1 size-3" />
+          <span>{formatNumber(stars)}</span>
+        </a>
+        <a
+          class="relative inline-flex items-center text-sm font-medium hover:text-accent focus-visible:text-accent"
+          href={github}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label={`${formatNumber(forks)} forks on GitHub (opens in a new tab)`}
+        >
+          <Fork class="mr-1 size-3" />
+          <span>{formatNumber(forks)}</span>
+        </a>
+        {
+          !!downloads && (
+            <a
+              class="relative inline-flex items-center text-sm font-medium hover:text-accent focus-visible:text-accent"
+              href={github}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={`${formatNumber(downloads)} installs on GitHub (opens in a new tab)`}
+            >
+              <Download class="mr-1 size-3" />
+              <span>{formatNumber(downloads)} Installs</span>
+            </a>
+          )
+        }
+      </div>
+      {tags && <BadgeList tags={tags} />}
+    </div>
+    <img
+      alt={imageAlt}
+      loading="lazy"
+      width="200"
+      height="48"
+      decoding="async"
+      class="aspect-video object-cover rounded border-2 border-border/10 transition group-hover:border-border/30 sm:order-1 sm:col-span-2 sm:translate-y-1 text-transparent"
+      src={image}
+    />
+  </div>
+</li>

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "@fontsource-variable/newsreader/wght-italic.css";
+@import "@fontsource-variable/newsreader";
+@import "@fontsource-variable/inter";
+
+:root {
+  --background: rgb(15 23 42);
+  --primary: rgb(226 232 240);
+  --secondary: rgb(148 163 184);
+  --tertiary: rgb(203 213 225);
+  --accent: rgb(94 234 212);
+  --accent-background: rgb(45, 212, 191);
+  --muted: rgb(100 116 139);
+  --border: rgb(226, 232, 240);
+}
+
+@font-face {
+  font-family: "SF Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/SFMono-Regular.woff2") format("woff2");
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-background: var(--accent-background);
+  --color-border: var(--border);
+  --font-sans: "Inter variable", ui-sans-serif, system-ui;
+  --font-sans--font-feature-settings: "ss03", "cv02", "cv11";
+  --font-sans--font-variation-settings: normal;
+  --font-serif: "Newsreader variable", ui-serif, system-ui;
+  --font-mono: "SF Mono", ui-monospace, system-ui;
+}
+
+@utility text-stroke-* {
+  -webkit-text-stroke-color: var(--color-secondary);
+  -webkit-text-stroke-width: --value([length]);
+  -webkit-text-fill-color: transparent;
+}
+
+@utility mask-gradient {
+  mask-image: linear-gradient(
+    to bottom,
+    var(--color-background) 25%,
+    transparent
+  );
+}
+
+body {
+  counter-reset: section;
+}
+
+.numbered-heading::before {
+  counter-increment: section;
+  content: "0" counter(section) ".";
+  margin-right: 0.6rem;
+  color: var(--color-accent);
+  font-family: "SF Mono", ui-monospace, system-ui;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500;
+}
+
+/* Project Item with Background Text */
+.project-item {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.project-item::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  font-size: 6rem; /* text-7xl or larger */
+  font-weight: 800;
+  color: var(--color-muted); /* dark-bg-text */
+  z-index: -1;
+  opacity: 0.3;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}

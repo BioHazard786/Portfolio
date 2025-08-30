@@ -1,0 +1,56 @@
+---
+import ArrowRight from "@/assets/arrow-right.svg";
+import ProjectCard from "@/components/ui/ProjectCard.astro";
+import projects from "@/data/projects.json";
+import { getGithubRepoStats } from "@/lib/github";
+
+const githubProjects = projects.filter((p) => p.github);
+
+const stats = await Promise.all(
+  githubProjects.map(async (project) => {
+    const { github, stars, forks, downloads } = await getGithubRepoStats(
+      project.github!
+    );
+    return { github, stars, forks, downloads };
+  })
+);
+
+const selectedProjects = projects.map((project) => {
+  const projectStats = stats.find((stat) => stat.github === project.github);
+  return { ...project, ...projectStats };
+});
+---
+
+<section id="projects" class="mb-16" aria-label="Selected Projects">
+  <h2
+    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif"
+  >
+    Selected Work
+  </h2>
+  <div>
+    <ol class="group/list">
+      {selectedProjects.map((project) => <ProjectCard {...project} />)}
+    </ol>
+    <div class="mt-12">
+      <a
+        class="inline-flex items-center leading-tight text-primary font-semibold group"
+        aria-label="View Full Project Archive"
+        href="/archive"
+        ><span
+          ><span
+            class="border-b border-transparent pb-px transition group-hover:border-accent motion-reduce:transition-none"
+            >View Full Project<!-- -->
+          </span><span class="whitespace-nowrap"
+            ><span
+              class="border-b border-transparent pb-px transition group-hover:border-accent motion-reduce:transition-none"
+              >Archive</span
+            >
+            <ArrowRight
+              class="ml-1 inline-block size-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
+            /></span
+          ></span
+        ></a
+      >
+    </div>
+  </div>
+</section>

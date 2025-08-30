@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Master of Technology",
+    "description": "Currently pursuing a Master's degree in Computer Science Engineering. With technical courses such as Advanced Data Structures, Reinforcement Learning, Big Data Analytics, Cyber Security, Data Warehousing and Data Mining, Data Science.",
+    "tags": ["Dehradun", "Uttarakhand", "India"],
+    "time": "2024 — Present",
+    "instituteName": "Graphic Era Hill University",
+    "instituteLink": "https://gehu.ac.in/",
+    "location": "Dehradun, India"
+  },
+  {
+    "title": "Bachelor of Technology",
+    "description": "Completed a Bachelor's degree in Computer Science Engineering. With technical courses such as Data Structures and Algorithms, Operating Systems, Database Management Systems, Object Oriented Programming, Computer Networks, Design and Analysis of Algorithms.",
+    "tags": ["Sonepat", "Haryana", "India"],
+    "time": "2019 — 2023",
+    "instituteName": "IIIT Sonepat",
+    "instituteLink": "https://iiitsonepat.ac.in/",
+    "score": "8.7 CGPA",
+    "location": "Sonepat, India"
+  },
+  {
+    "title": "Senior Secondary (Class XII)",
+    "description": "Completed my senior secondary education from the ISC board with a focus on the science stream. Key subjects included Physics, Chemistry, Mathematics and Computer Programming.",
+    "tags": ["Dehradun", "Uttarakhand", "India"],
+    "time": "2016 — 2018",
+    "instituteName": "Carman School",
+    "instituteLink": "https://www.carmanschool.com/",
+    "score": "9.3 CGPA / 93%",
+    "location": "Dehradun, India"
+  },
+  {
+    "title": "Secondary (Class X)",
+    "description": "Completed my secondary education from the ICSE board.",
+    "tags": ["Dehradun", "Uttarakhand", "India"],
+    "time": "Completed in 2016",
+    "instituteName": "Carman School",
+    "instituteLink": "https://www.carmanschool.com/",
+    "score": "8.3 CGPA / 83%",
+    "location": "Dehradun, India"
+  }
+]

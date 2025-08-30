@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Software Developer",
+    "description": "Developed high-performance mobile apps for customers and vendors with fast startup, smooth UI, and cross-platform consistency. Built and launched a responsive company website with engaging landing and direct app download links.",
+    "tags": ["Flutter", "React", "Netlify"],
+    "time": "Jan 2023 — Jul 2023",
+    "companyName": "Redipay",
+    "companyLink": "https://iiitsonepat.ac.in/",
+    "position": "Intern",
+    "location": "New Delhi, India"
+  },
+  {
+    "title": "Research",
+    "description": "Researched web page quality and speed, validated web metrics through practical experiments, and scraped real-world data using Headless Puppeteer and Python. Automated metric evaluation with Lighthouse and JavaScript.",
+    "tags": ["JavaScript", "Python", "Analytics", "Puppeteer"],
+    "time": "Jan 2022 — Jul 2022",
+    "companyName": "IIIT Sonepat",
+    "companyLink": "https://iiitsonepat.ac.in/",
+    "position": "Intern",
+    "location": "Sonepat, India"
+  }
+]
