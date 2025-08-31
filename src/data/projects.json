@@ -1,48 +1,106 @@
 [
   {
+    "year": "2025",
+    "title": "Personal Website",
+    "madeAt": "Open Source",
+    "technologies": ["Astro", "TypeScript", "Tailwind CSS"],
+    "link": "https://github.com/BioHazard786/Portfolio"
+  },
+  {
+    "year": "2025",
+    "title": "My Masjid",
+    "madeAt": "Open Source",
+    "technologies": ["Expo", "React Native", "Hono", "NativeWind"],
+    "link": "https://github.com/BioHazard786/My-Masjid"
+  },
+  {
+    "year": "2025",
     "title": "Alternate",
-    "link": "https://github.com/BioHazard786/Alternate",
-    "description": "A privacy-focused caller ID app that identifies unknown callers locally, keeping your contacts organized and secure.",
-    "image": "/images/projects/alternate.png",
-    "imageAlt": "Alternate App Screenshot",
-    "github": "https://github.com/BioHazard786/Alternate",
-    "tags": ["Expo", "React Native", "Typescript", "SQLite"],
-    "year": 2025
+    "madeAt": "Open Source",
+    "technologies": ["Expo", "React Native", "Typescript", "SQLite"],
+    "link": "https://github.com/BioHazard786/Alternate"
   },
   {
+    "year": "2025",
+    "title": "Kiro Theme",
+    "madeAt": "Open Source",
+    "technologies": ["VS Code", "Light", "Dark"],
+    "link": "https://marketplace.visualstudio.com/items?itemName=MohdZaid.kiro-theme"
+  },
+  {
+    "year": "2025",
     "title": "Leetcode Companywise Questions",
-    "link": "https://leetcode-companywise-questions.vercel.app/",
-    "description": "Explore and filter LeetCode problems by company, topic, and difficulty in a user-friendly interface.",
-    "image": "/images/projects/leetcode-companywise-questions.webp",
-    "imageAlt": "Leetcode Companywise Questions Screenshot",
-    "github": "https://github.com/BioHazard786/Leetcode-Companywise-Questions",
-    "tags": [
-      "Next.js",
-      "Tailwind CSS",
-      "Tanstack Query",
-      "Tanstack Table",
-      "Nuqs"
-    ],
-    "year": 2025
+    "madeAt": "Open Source",
+    "technologies": ["Next.js", "Tailwind CSS", "Tanstack", "Nuqs"],
+    "link": "https://leetcode-companywise-questions.vercel.app/"
   },
   {
-    "title": "Billicious",
-    "link": "https://app.billicious.tech/",
-    "description": "Billicious is an open-source alternative to Splitwise for splitting group expenses easily and transparently.",
-    "image": "/images/projects/billicious.webp",
-    "imageAlt": "Billicious App Screenshot",
-    "github": "https://github.com/BioHazard786/Billicious",
-    "tags": ["Next.js", "React", "Tailwind CSS", "Zustand", "Tanstack Query"],
-    "year": 2024
+    "year": "2025",
+    "title": "DSA Progress Tracker Bot",
+    "madeAt": "Open Source",
+    "technologies": ["Python", "Pyrogram", "Telegram", "Leetcode"],
+    "link": "https://t.me/dsa_progress_checker_bot"
   },
   {
+    "year": "2025",
+    "title": "No Fap Streak",
+    "madeAt": "Open Source",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn-ui"],
+    "link": "https://no-fap-streak.biohazard786.workers.dev/"
+  },
+  {
+    "year": "2025",
     "title": "The Media Index",
-    "link": "https://the-media-index.netlify.app/",
-    "description": "Browse and search media items with a fast, accessible, and type-safe experience.",
-    "image": "/images/projects/the-media-index.webp",
-    "imageAlt": "The Media Index Screenshot",
-    "github": "https://github.com/BioHazard786/The-Media-Index",
-    "tags": ["Next.js", "React", "CSS", "MongoDB", "Tanstack Query"],
-    "year": 2023
+    "madeAt": "Open Source",
+    "technologies": ["Next.js", "React", "CSS", "MongoDB", "Tanstack Query"],
+    "link": "https://the-media-index.netlify.app/"
+  },
+  {
+    "year": "2024",
+    "title": "Nyaa Proxy",
+    "madeAt": "Open Source",
+    "technologies": ["Hono", "Proxy", "Vercel"],
+    "link": "https://github.com/BioHazard786/Nyaa-Proxy"
+  },
+  {
+    "year": "2024",
+    "title": "Custom Posters",
+    "madeAt": "Open Source",
+    "technologies": ["Python", "Pillow", "Flask", "Vercel"],
+    "link": "https://custom-posters.vercel.app/"
+  },
+  {
+    "year": "2024",
+    "title": "Billicious",
+    "madeAt": "Open Source",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Zustand",
+      "Tanstack Query"
+    ],
+    "link": "https://app.billicious.tech/"
+  },
+  {
+    "year": "2024",
+    "title": "Billicious Landing Page",
+    "madeAt": "Open Source",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Motion", "Shadcn-ui"],
+    "link": "https://billicious.tech/"
+  },
+  {
+    "year": "2023",
+    "title": "YT Music Bot",
+    "madeAt": "Open Source",
+    "technologies": ["Python", "Pyrogram", "Telegram", "MongoDB", "Yt-dlp"],
+    "link": "https://github.com/BioHazard786/Yt-Music-Bot"
+  },
+  {
+    "year": "2022",
+    "title": "InternFreak Bot",
+    "madeAt": "Open Source",
+    "technologies": ["Python", "Pyrogram", "Telegram"],
+    "link": "https://github.com/BioHazard786/InternFreak-Bot"
   }
 ]

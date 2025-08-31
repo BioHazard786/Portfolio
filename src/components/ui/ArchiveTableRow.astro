@@ -1,0 +1,79 @@
+---
+import BadgeList from "@/components/ui/BadgeList.astro";
+import ArrowUpRight from "@/assets/arrow-up-right.svg";
+import Github from "@/assets/github.svg";
+
+interface Props {
+  year: string;
+  title: string;
+  madeAt?: string;
+  technologies: string[];
+  link?: string;
+}
+
+const { year, title, madeAt, technologies, link } = Astro.props;
+
+let linkHost = link ? new URL(link).host : "";
+linkHost = linkHost === "github.com" ? "Github" : linkHost;
+---
+
+<tr class="border-b border-border/10 last:border-none">
+  <td class="py-4 pr-4 align-top text-sm">
+    <div class="translate-y-px text-secondary">{year}</div>
+  </td>
+  <td class="py-4 pr-4 align-top font-semibold leading-snug">
+    <div>
+      <div class="block sm:hidden">
+        <a
+          class="inline-flex items-baseline font-medium leading-tight hover:text-accent focus-visible:text-accent sm:hidden group/link"
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label={`${title} (opens in a new tab)`}
+        >
+          <span>
+            <span class="inline-block">
+              {title}
+              <ArrowUpRight
+                class="inline-block size-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5"
+              />
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="hidden sm:block">{title}</div>
+    </div>
+  </td>
+  <td class="hidden py-4 pr-4 align-top text-sm lg:table-cell">
+    <div class="translate-y-px whitespace-nowrap text-secondary">{madeAt}</div>
+  </td>
+  <td class="hidden py-4 pr-4 align-top lg:table-cell">
+    <BadgeList tags={technologies} class="mt-0 -translate-y-3" />
+  </td>
+  <td class="hidden py-4 align-top sm:table-cell">
+    <ul class="translate-y-1">
+      <li class="mb-1 flex items-center">
+        <a
+          class="inline-flex items-baseline font-medium leading-tight hover:text-accent focus-visible:text-accent text-sm text-secondary group/link"
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label={`${linkHost} (opens in a new tab)`}
+        >
+          <span>
+            <span class="inline-block">
+              {linkHost}
+              {
+                linkHost === "Github" ? (
+                  <Github class="inline-block size-4 shrink-0 transition-transform motion-reduce:transition-none ml-1 -translate-y-px" />
+                ) : (
+                  <ArrowUpRight class="inline-block size-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" />
+                )
+              }
+            </span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </td>
+</tr>

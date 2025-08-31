@@ -1,7 +1,7 @@
 ---
 import ArrowRight from "@/assets/arrow-right.svg";
 import ProjectCard from "@/components/ui/ProjectCard.astro";
-import projects from "@/data/projects.json";
+import projects from "@/data/selectedProjects.json";
 import { getGithubRepoStats } from "@/lib/github";
 
 const githubProjects = projects.filter((p) => p.github);

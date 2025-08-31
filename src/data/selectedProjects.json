@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Alternate",
+    "link": "https://github.com/BioHazard786/Alternate",
+    "description": "A privacy-focused caller ID app that identifies unknown callers locally, keeping your contacts organized and secure.",
+    "image": "/images/projects/alternate.png",
+    "imageAlt": "Alternate App Screenshot",
+    "github": "https://github.com/BioHazard786/Alternate",
+    "tags": ["Expo", "React Native", "Typescript", "SQLite"],
+    "year": 2025
+  },
+  {
+    "title": "Leetcode Companywise Questions",
+    "link": "https://leetcode-companywise-questions.vercel.app/",
+    "description": "Explore and filter LeetCode problems by company, topic, and difficulty in a user-friendly interface.",
+    "image": "/images/projects/leetcode-companywise-questions.webp",
+    "imageAlt": "Leetcode Companywise Questions Screenshot",
+    "github": "https://github.com/BioHazard786/Leetcode-Companywise-Questions",
+    "tags": [
+      "Next.js",
+      "Tailwind CSS",
+      "Tanstack Query",
+      "Tanstack Table",
+      "Nuqs"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Billicious",
+    "link": "https://app.billicious.tech/",
+    "description": "Billicious is an open-source alternative to Splitwise for splitting group expenses easily and transparently.",
+    "image": "/images/projects/billicious.webp",
+    "imageAlt": "Billicious App Screenshot",
+    "github": "https://github.com/BioHazard786/Billicious",
+    "tags": ["Next.js", "React", "Tailwind CSS", "Zustand", "Tanstack Query"],
+    "year": 2024
+  },
+  {
+    "title": "The Media Index",
+    "link": "https://the-media-index.netlify.app/",
+    "description": "Browse and search media items with a fast, accessible, and type-safe experience.",
+    "image": "/images/projects/the-media-index.webp",
+    "imageAlt": "The Media Index Screenshot",
+    "github": "https://github.com/BioHazard786/The-Media-Index",
+    "tags": ["Next.js", "React", "CSS", "MongoDB", "Tanstack Query"],
+    "year": 2023
+  }
+]

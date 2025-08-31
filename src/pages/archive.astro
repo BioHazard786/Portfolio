@@ -1,10 +1,15 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import ArchiveTable from "@/components/ArchiveTable.astro";
+import ArchiveTable from "@/components/archive-page/ArchiveTable.astro";
+import Header from "@/components/archive-page/Header.astro";
 ---
 
-<Layout title="Projects Archive | Mohd Zaid">
+<Layout
+  title="Projects Archive | Mohd Zaid"
+  class="max-w-screen-xl min-h-screen md:px-12 md:py-16 lg:py-24"
+>
   <main>
+    <Header />
     <ArchiveTable />
   </main>
 </Layout>

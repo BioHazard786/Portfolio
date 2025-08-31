@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,8 +13,10 @@
     "@fontsource-variable/newsreader": "^5.2.8",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.3",
+    "clsx": "^2.1.1",
     "pixi.js": "^8.12.0",
     "simplex-noise": "^4.0.3",
+    "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.12"
   }
 }

@@ -1,0 +1,27 @@
+---
+import projects from "@/data/projects.json";
+import ArchiveTableRow from "@/components/ui/ArchiveTableRow.astro";
+---
+
+<table id="content" class="mt-12 w-full border-collapse text-left">
+  <thead class="px-6 py-5"
+    ><tr
+      ><th class="py-4 pr-8 text-sm font-semibold text-primary">Year</th><th
+        class="py-4 pr-8 text-sm font-semibold text-primary w-[300px]"
+        >Project</th
+      ><th
+        class="hidden py-4 pr-8 text-sm font-semibold text-primary lg:table-cell w-[150px]"
+        >Made at</th
+      ><th
+        class="hidden py-4 pr-8 text-sm font-semibold text-primary lg:table-cell w-[430px]"
+        >Built with</th
+      ><th
+        class="hidden py-4 pr-8 text-sm font-semibold text-primary sm:table-cell"
+        >Link</th
+      ></tr
+    ></thead
+  >
+  <tbody>
+    {projects.map((project) => <ArchiveTableRow {...project} />)}
+  </tbody>
+</table>

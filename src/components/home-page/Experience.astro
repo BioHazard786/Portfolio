@@ -12,20 +12,7 @@ import ArrowUpRight from "@/assets/arrow-up-right.svg";
   </h2>
   <div>
     <ol class="group/list">
-      {
-        experienceData.map((item) => (
-          <ExperienceCard
-            title={item.title}
-            description={item.description}
-            tags={item.tags}
-            time={item.time}
-            companyName={item.companyName}
-            companyLink={item.companyLink}
-            position={item.position}
-            location={item.location}
-          />
-        ))
-      }
+      {experienceData.map((data) => <ExperienceCard {...data} />)}
     </ol>
     <div class="mt-12">
       <a
