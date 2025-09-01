@@ -25,6 +25,11 @@
     return window.matchMedia("(min-width: 1024px)").matches;
   }
 
+  if (!isLargeScreen()) {
+    blob!.style.setProperty("--x", "0");
+    blob!.style.setProperty("--y", "0");
+  }
+
   window.addEventListener("pointermove", (event) => {
     if (isLargeScreen()) {
       const { pageX, pageY } = event;
@@ -32,9 +37,6 @@
       // Update the CSS variables with the correct coordinates
       blob!.style.setProperty("--x", pageX + "px");
       blob!.style.setProperty("--y", pageY + "px");
-    } else {
-      blob!.style.setProperty("--x", "0");
-      blob!.style.setProperty("--y", "0");
     }
   });
 </script>
