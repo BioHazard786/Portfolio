@@ -25,7 +25,7 @@ const {
 } = Astro.props;
 ---
 
-<li class="mb-12">
+<li class="mb-12 animate-fade-up-small">
   <div
     class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
   >
@@ -68,7 +68,7 @@ const {
       {
         position && (
           <p
-            class="text-muted font-medium leading-snug text-[0.9rem]"
+            class="text-muted font-medium leading-snug text-[0.9rem] animate-fade-up-small animation-delay-300"
             aria-hidden="true"
           >
             {position}
@@ -78,15 +78,22 @@ const {
       {
         location && (
           <p
-            class="text-muted font-medium leading-snug text-[0.9rem]"
+            class="text-muted font-medium leading-snug text-[0.9rem] animate-fade-up-small animation-delay-300"
             aria-hidden="true"
           >
             {location}
           </p>
         )
       }
-      <p class="mt-2 text-sm leading-normal text-secondary">{description}</p>
-      <BadgeList tags={tags} />
+      <p
+        class="mt-2 text-sm leading-normal text-secondary animate-fade-up-small animation-delay-400"
+      >
+        {description}
+      </p>
+      <BadgeList
+        tags={tags}
+        class="animate-fade-up-small animation-delay-500"
+      />
     </div>
   </div>
 </li>

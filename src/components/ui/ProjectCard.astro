@@ -35,7 +35,7 @@ const {
 } = Astro.props;
 ---
 
-<li class="mb-12">
+<li class="mb-12 animate-fade-up-small">
   <div
     class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-9 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
   >
@@ -71,8 +71,14 @@ const {
           </span>
         </a>
       </h3>
-      <p class="mt-2 text-sm leading-normal text-secondary">{description}</p>
-      <div class="mt-2 flex gap-4 text-tertiary">
+      <p
+        class="mt-2 text-sm leading-normal text-secondary animate-fade-up-small animation-delay-300"
+      >
+        {description}
+      </p>
+      <div
+        class="mt-2 flex gap-4 text-tertiary animate-fade-up-small animation-delay-400"
+      >
         <a
           class="relative inline-flex items-center text-sm font-medium hover:text-accent focus-visible:text-accent"
           href={github}
@@ -108,7 +114,14 @@ const {
           )
         }
       </div>
-      {tags && <BadgeList tags={tags} />}
+      {
+        tags && (
+          <BadgeList
+            tags={tags}
+            class="animate-fade-up-small animation-delay-500"
+          />
+        )
+      }
     </div>
     <img
       alt={imageAlt}

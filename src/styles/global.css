@@ -66,24 +66,173 @@ body {
   font-weight: 500;
 }
 
-/* Project Item with Background Text */
-.project-item {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+/* Optimized Animations - Reusable across components */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.project-item::before {
-  content: attr(data-title);
-  position: absolute;
-  top: 50%;
-  left: -10px;
-  transform: translateY(-50%);
-  font-size: 6rem; /* text-7xl or larger */
-  font-weight: 800;
-  color: var(--color-muted); /* dark-bg-text */
-  z-index: -1;
-  opacity: 0.3;
-  user-select: none;
-  pointer-events: none;
-  white-space: nowrap;
+
+@keyframes fadeUpSmall {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Base animation classes */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-up-small {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUpSmall 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-left {
+  animation: fadeInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-right {
+  animation: fadeInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Delay utilities */
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+.animation-delay-700 {
+  animation-delay: 0.7s;
+}
+.animation-delay-800 {
+  animation-delay: 0.8s;
+}
+.animation-delay-900 {
+  animation-delay: 0.9s;
+}
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Stagger delays for lists */
+.stagger-50 > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.stagger-50 > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.stagger-50 > *:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.stagger-50 > *:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.stagger-50 > *:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.stagger-50 > *:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.stagger-50 > *:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.stagger-50 > *:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.stagger-50 > *:nth-child(9) {
+  animation-delay: 0.45s;
+}
+.stagger-50 > *:nth-child(10) {
+  animation-delay: 0.5s;
+}
+
+.stagger-100 > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-100 > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-100 > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-100 > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-100 > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stagger-100 > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.stagger-100 > *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.stagger-100 > *:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-small,
+  .animate-fade-left,
+  .animate-fade-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+  }
 }

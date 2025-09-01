@@ -5,12 +5,12 @@ import educationData from "@/data/education.json";
 
 <section id="education" class="mb-16" aria-label="Education">
   <h2
-    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif"
+    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif animate-fade-up"
   >
     Academic Background
   </h2>
-  <div>
-    <ol class="group/list">
+  <div class="animate-fade-up animation-delay-200">
+    <ol class="group/list stagger-100">
       {
         educationData.map((item) => (
           <ExperienceCard

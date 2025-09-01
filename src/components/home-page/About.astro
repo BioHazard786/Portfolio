@@ -46,15 +46,118 @@ import Skills from "@/data/skills.json";
   .icon-animate:hover {
     transform: translateY(-4px);
   }
+
+  /* Fade-up animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .fade-up-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .fade-up-delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .fade-up-delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .fade-up-delay-4 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger animation for skills list */
+  .skills-list li {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUpSmall 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .skills-list li:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  .skills-list li:nth-child(2) {
+    animation-delay: 0.35s;
+  }
+  .skills-list li:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .skills-list li:nth-child(4) {
+    animation-delay: 0.45s;
+  }
+  .skills-list li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .skills-list li:nth-child(6) {
+    animation-delay: 0.55s;
+  }
+  .skills-list li:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  .skills-list li:nth-child(8) {
+    animation-delay: 0.65s;
+  }
+
+  @keyframes fadeUpSmall {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Social icons animation */
+  .social-icons a {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUpSmall 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .social-icons a:nth-child(1) {
+    animation-delay: 0.7s;
+  }
+  .social-icons a:nth-child(2) {
+    animation-delay: 0.75s;
+  }
+  .social-icons a:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+  .social-icons a:nth-child(4) {
+    animation-delay: 0.85s;
+  }
+  .social-icons a:nth-child(5) {
+    animation-delay: 0.9s;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up,
+    .skills-list li,
+    .social-icons a {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
 </style>
 
 <section id="about" class="mb-16">
   <h2
-    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif"
+    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif fade-up"
   >
     About Me
   </h2>
-  <p class="text-base text-secondary leading-relaxed">
+  <p class="text-base text-secondary leading-relaxed fade-up fade-up-delay-1">
     I’m a developer passionate about crafting <em>unforgettable</em> user experiences.
     My favorite work lies at the <em>intersection</em> of design and development—creating
     interfaces that are accessible, pixel-perfect, and meticulously engineered for
@@ -84,10 +187,12 @@ import Skills from "@/data/skills.json";
         aria-hidden="true">.</span
       >
     </span>
-    <p class="text-base text-secondary leading-relaxed mt-4">
+    <p
+      class="text-base text-secondary leading-relaxed mt-4 fade-up fade-up-delay-2"
+    >
       Here are a few technologies I’ve been working with recently:
     </p>
-    <ul>
+    <ul class="skills-list">
       {
         Skills.map((skill) => (
           <li>
@@ -97,7 +202,9 @@ import Skills from "@/data/skills.json";
         ))
       }
     </ul>
-    <div class="mt-6 flex items-center space-x-5 text-secondary text-sm">
+    <div
+      class="mt-6 flex items-center space-x-5 text-secondary text-sm social-icons"
+    >
       <a
         href="https://github.com/BioHazard786"
         class="hover:text-primary size-5 text-secondary transition-colors icon-animate"

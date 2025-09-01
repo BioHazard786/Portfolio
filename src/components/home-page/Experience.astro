@@ -6,15 +6,15 @@ import ArrowUpRight from "@/assets/arrow-up-right.svg";
 
 <section id="experience" class="mb-16" aria-label="Work Experience">
   <h2
-    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif"
+    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif animate-fade-up"
   >
     Career Journey
   </h2>
-  <div>
-    <ol class="group/list">
+  <div class="animate-fade-up animation-delay-200">
+    <ol class="group/list stagger-100">
       {experienceData.map((data) => <ExperienceCard {...data} />)}
     </ol>
-    <div class="mt-12">
+    <div class="mt-12 animate-fade-up animation-delay-400">
       <a
         class="inline-flex items-baseline font-semibold leading-tight text-primary hover:text-accent focus-visible:text-accent group/link text-base"
         href="/resume.pdf"
