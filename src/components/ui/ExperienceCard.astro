@@ -44,13 +44,13 @@ const {
         <div>
           <a
             href={companyLink}
-            class="inline-flex items-baseline hover:text-accent focus-visible:text-accent group/link"
+            class="inline-flex items-baseline group-hover:text-accent group-focus-visible:text-accent group/link"
             target="_blank"
             rel="noreferrer noopener"
             aria-label={`${title} at ${companyName} (opens in a new tab)`}
           >
             <span
-              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block z-10"
             ></span>
             <span>
               {title}
@@ -58,7 +58,7 @@ const {
               <span class="inline-block">
                 {companyName}
                 <ArrowUpRight
-                  class="inline-block size-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5"
+                  class="inline-block size-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-0.5"
                 />
               </span>
             </span>

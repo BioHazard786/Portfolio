@@ -14,7 +14,7 @@ const { title, class: className } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth bg-background text-primary">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,7 +50,7 @@ const { title, class: className } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body class="antialiased font-sans bg-background text-primary">
+  <body class="antialiased font-sans">
     <div class="group/spotlight relative">
       <CursorBlob />
       <Blur />

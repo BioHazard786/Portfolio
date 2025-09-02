@@ -39,44 +39,6 @@ import Skills from "@/data/skills.json";
     gap: 15px;
   }
 
-  .icon-animate {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
-  }
-  .icon-animate:hover {
-    transform: translateY(-4px);
-  }
-
-  /* Fade-up animations */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-
-  .fade-up-delay-1 {
-    animation-delay: 0.1s;
-  }
-
-  .fade-up-delay-2 {
-    animation-delay: 0.2s;
-  }
-
-  .fade-up-delay-3 {
-    animation-delay: 0.3s;
-  }
-
-  .fade-up-delay-4 {
-    animation-delay: 0.4s;
-  }
-
-  @keyframes fadeUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   /* Stagger animation for skills list */
   .skills-list li {
     opacity: 0;
@@ -109,18 +71,23 @@ import Skills from "@/data/skills.json";
     animation-delay: 0.65s;
   }
 
-  @keyframes fadeUpSmall {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   /* Social icons animation */
   .social-icons a {
     opacity: 0;
     transform: translateY(15px);
     animation: fadeUpSmall 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .social-icons a span {
+    display: flex;
+    transition:
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .social-icons a:hover span {
+    transform: translateY(-4px);
+    color: var(--color-primary); /* This will work as expected */
   }
 
   .social-icons a:nth-child(1) {
@@ -153,11 +120,13 @@ import Skills from "@/data/skills.json";
 
 <section id="about" class="mb-16">
   <h2
-    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif fade-up"
+    class="numbered-heading text-2xl font-semibold mb-6 flex items-baseline font-serif animate-fade-up"
   >
     About Me
   </h2>
-  <p class="text-base text-secondary leading-relaxed fade-up fade-up-delay-1">
+  <p
+    class="text-base text-secondary leading-relaxed animate-fade-up animation-delay-200"
+  >
     I’m a developer passionate about crafting <em>unforgettable</em> user experiences.
     My favorite work lies at the <em>intersection</em> of design and development—creating
     interfaces that are accessible, pixel-perfect, and meticulously engineered for
@@ -188,7 +157,7 @@ import Skills from "@/data/skills.json";
       >
     </span>
     <p
-      class="text-base text-secondary leading-relaxed mt-4 fade-up fade-up-delay-2"
+      class="text-base text-secondary leading-relaxed mt-4 animate-fade-up animation-delay-200"
     >
       Here are a few technologies I’ve been working with recently:
     </p>
@@ -207,38 +176,42 @@ import Skills from "@/data/skills.json";
     >
       <a
         href="https://github.com/BioHazard786"
-        class="hover:text-primary size-5 text-secondary transition-colors icon-animate"
+        class="size-5 text-secondary"
         target="_blank"
         rel="noreferrer noopener"
-        aria-label="Github link (opens in a new tab)"><Github /></a
+        aria-label="Github link (opens in a new tab)"
       >
+        <span><Github /></span>
+      </a>
       <a
         href="https://x.com/coder_zaid"
-        class="hover:text-primary size-5 text-secondary transition-colors icon-animate"
+        class="size-5 text-secondary"
         target="_blank"
         rel="noreferrer noopener"
-        aria-label="X link (opens in a new tab)"><X /></a
+        aria-label="X link (opens in a new tab)"><span><X /></span></a
       >
       <a
         href="#"
-        class="hover:text-primary size-6 text-secondary transition-colors icon-animate"
+        class="size-6 text-secondary"
         target="_blank"
         rel="noreferrer noopener"
-        aria-label="LinkedIn link (opens in a new tab)"><LinkedIn /></a
+        aria-label="LinkedIn link (opens in a new tab)"
+        ><span><LinkedIn /></span></a
       >
       <a
         href="mailto:message@zaid.qzz.io"
-        class="hover:text-primary size-5 text-secondary transition-colors icon-animate"
+        class="size-5 text-secondary"
         target="_blank"
         rel="noreferrer noopener"
-        aria-label="Email link (opens in a new tab)"><Mail /></a
+        aria-label="Email link (opens in a new tab)"><span><Mail /></span></a
       >
       <a
         href="https://t.me/lulu786"
-        class="hover:text-primary size-5 text-secondary transition-colors icon-animate"
+        class="size-5 text-secondary"
         target="_blank"
         rel="noreferrer noopener"
-        aria-label="Telegram link (opens in a new tab)"><Telegram /></a
+        aria-label="Telegram link (opens in a new tab)"
+        ><span><Telegram /></span></a
       >
     </div>
   </p>

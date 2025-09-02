@@ -89,28 +89,6 @@ body {
   }
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 /* Base animation classes */
 .animate-fade-up {
   opacity: 0;
@@ -122,14 +100,6 @@ body {
   opacity: 0;
   transform: translateY(15px);
   animation: fadeUpSmall 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-fade-left {
-  animation: fadeInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-fade-right {
-  animation: fadeInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* Delay utilities */
@@ -235,4 +205,9 @@ body {
   .animate-on-scroll {
     opacity: 1;
   }
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-accent);
 }
