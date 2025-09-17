@@ -12,9 +12,8 @@ interface Props {
 
 const { title, class: className } = Astro.props;
 
-// Get the current site URL directly from the request
-const siteUrl = `${Astro.url.protocol}//${Astro.url.host}`;
-const currentUrl = Astro.url.toString();
+const siteUrl = import.meta.env.SITE_URL || "https://zaid.qzz.io";
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
 const ogImageUrl = `${siteUrl}/images/og.png`;
 ---
 
