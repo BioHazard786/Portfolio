@@ -27,7 +27,7 @@
   },
   {
     "title": "Billicious",
-    "link": "https://app.billicious.tech/",
+    "link": "https://app-billicious.vercel.app/",
     "description": "Billicious is an open-source alternative to Splitwise for splitting group expenses easily and transparently.",
     "image": "/images/projects/billicious.webp",
     "imageAlt": "Billicious App Screenshot",
