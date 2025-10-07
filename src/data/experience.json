@@ -1,12 +1,12 @@
 [
   {
     "title": "Software Developer",
-    "description": "Developed high-performance mobile apps for customers and vendors with fast startup, smooth UI, and cross-platform consistency. Built and launched a responsive company website with engaging landing and direct app download links.",
-    "tags": ["Flutter", "React", "Netlify"],
+    "description": "Built mobile apps using React Native for Android and iOS. Developed company webapp and landing page using React and TailwindCSS. Improved app performance to 45MB size and 2-second startup time.",
+    "tags": ["React", "React Native", "TailwindCSS"],
     "time": "Jan 2023 — Jul 2023",
     "companyName": "Redipay",
-    "companyLink": "https://iiitsonepat.ac.in/",
-    "position": "Intern",
+    "companyLink": "https://drive.google.com/file/d/1TW-bMK_A3VpHFKhg0MSkY72V0kq4wSKt/view?usp=drive_link",
+    "position": "Frontend Intern",
     "location": "New Delhi, India"
   },
   {
