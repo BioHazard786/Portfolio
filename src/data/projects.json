@@ -1,6 +1,20 @@
 [
   {
     "year": "2025",
+    "title": "Janitor",
+    "madeAt": "Open Source",
+    "technologies": ["Go", "YAML"],
+    "link": "https://github.com/BioHazard786/Janitor"
+  },
+  {
+    "year": "2025",
+    "title": "Cursor Theme",
+    "madeAt": "Open Source",
+    "technologies": ["VS Code", "Light", "Dark"],
+    "link": "https://marketplace.visualstudio.com/items?itemName=MohdZaid.vscode-cursor-theme"
+  },
+  {
+    "year": "2025",
     "title": "Personal Website",
     "madeAt": "Open Source",
     "technologies": ["Astro", "TypeScript", "Tailwind CSS"],
