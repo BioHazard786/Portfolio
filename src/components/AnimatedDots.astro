@@ -1,98 +1,95 @@
 ---
-// This component is purely for the background animation.
+// Lightweight canvas-based particle background animation
 ---
 
-<div id="pixi-canvas-container" class="fixed inset-0 -z-10 pointer-events-none">
-</div>
+<canvas id="particle-canvas" class="fixed inset-0 -z-10 pointer-events-none">
+</canvas>
 
 <script>
-  import * as PIXI from "pixi.js";
   import { createNoise3D } from "simplex-noise";
 
-  // Define a type for our point objects for better type safety.
   interface Point {
     x: number;
     y: number;
     opacity: number;
-    particle: PIXI.Sprite;
   }
 
-  const el = document.getElementById("pixi-canvas-container");
+  const canvas = document.getElementById(
+    "particle-canvas"
+  ) as HTMLCanvasElement;
 
-  if (el) {
+  if (canvas) {
+    const ctx = canvas.getContext("2d", { alpha: true })!;
+    const isMobile = window.innerWidth < 768;
     const SCALE = 200;
     const LENGTH = 5;
-    const SPACING = 15;
+    const SPACING = isMobile ? 12 : 15; // More spacing on mobile = less dense
+    const DOT_RADIUS = 1;
+    const DOT_COLOR = "#434b5c";
 
     const noise3d = createNoise3D();
-    const existingPoints = new Set<string>();
     const points: Point[] = [];
+    let animationId: number;
 
-    let app: PIXI.Application;
-    let container: PIXI.Container;
-    let dotTexture: PIXI.Texture;
-
-    async function setup() {
-      app = new PIXI.Application();
-      await app.init({
-        backgroundAlpha: 0, // Transparent background
-        antialias: true,
-        resolution: window.devicePixelRatio,
-        resizeTo: el!,
-        autoDensity: true,
-      });
-      el!.appendChild(app.canvas);
-
-      container = new PIXI.Container();
-      app.stage.addChild(container);
-
-      // Create a texture for the dots once.
-      const g = new PIXI.Graphics().circle(0, 0, 1).fill(0x434b5c);
-      dotTexture = app.renderer.generateTexture(g);
-
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
+      ctx.scale(dpr, dpr);
       addPoints();
-
-      app.ticker.add(() => {
-        const t = Date.now() / 10000;
-        for (const p of points) {
-          const { x, y, opacity, particle } = p;
-          const rad = (noise3d(x / SCALE, y / SCALE, t) - 0.5) * 2 * Math.PI;
-          const len = (noise3d(x / SCALE, y / SCALE, t * 2) + 0.5) * LENGTH;
-          const nx = x + Math.cos(rad) * len;
-          const ny = y + Math.sin(rad) * len;
-
-          particle.x = nx;
-          particle.y = ny;
-          particle.alpha = (Math.abs(Math.cos(rad)) * 0.8 + 0.2) * opacity;
-        }
-      });
-
-      window.addEventListener("resize", addPoints);
     }
 
     function addPoints() {
-      // Get the current dimensions from the canvas element itself
       const w = window.innerWidth;
       const h = window.innerHeight;
+      const existingSet = new Set(points.map((p) => `${p.x}-${p.y}`));
 
       for (let x = -SPACING / 2; x < w + SPACING; x += SPACING) {
         for (let y = -SPACING / 2; y < h + SPACING; y += SPACING) {
           const id = `${x}-${y}`;
-          if (existingPoints.has(id)) continue;
-          existingPoints.add(id);
-
-          const particle = new PIXI.Sprite(dotTexture);
-          particle.anchor.set(0.5);
-          container.addChild(particle);
+          if (existingSet.has(id)) continue;
 
           const opacity = Math.random() * 0.5 + 0.5;
-          points.push({ x, y, opacity, particle });
+          points.push({ x, y, opacity });
         }
       }
     }
 
-    // FIX: Use the 'load' event to ensure all styles are applied and the
-    // container has its final size before the script runs.
-    document.addEventListener("DOMContentLoaded", setup);
+    function animate() {
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      const t = Date.now() / 10000;
+
+      for (const p of points) {
+        const { x, y, opacity } = p;
+        const rad = (noise3d(x / SCALE, y / SCALE, t) - 0.5) * 2 * Math.PI;
+        const len = (noise3d(x / SCALE, y / SCALE, t * 2) + 0.5) * LENGTH;
+        const nx = x + Math.cos(rad) * len;
+        const ny = y + Math.sin(rad) * len;
+        const alpha = (Math.abs(Math.cos(rad)) * 0.8 + 0.2) * opacity;
+
+        ctx.fillStyle = DOT_COLOR;
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
+        ctx.arc(nx, ny, DOT_RADIUS, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      ctx.globalAlpha = 1;
+      animationId = requestAnimationFrame(animate);
+    }
+
+    resizeCanvas();
+    animate();
+
+    window.addEventListener("resize", resizeCanvas);
+
+    // Cleanup on page navigation (Astro specific)
+    document.addEventListener("astro:before-swap", () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener("resize", resizeCanvas);
+    });
   }
 </script>
