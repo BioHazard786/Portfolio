@@ -1,5 +1,15 @@
 [
   {
+    "title": "Lead Engineer",
+    "description": "Leading frontend and product development at our software agency, where we build end-to-end software solutions across web, mobile, and automation. I design and ship scalable applications, collaborate closely with clients, and deliver production-ready systems from idea to launch.",
+    "tags": ["React", "Next.js", "Python", "Go"],
+    "time": "Jan 2026 — Present",
+    "companyName": "αLynx",
+    "companyLink": "https://www.alynx.agency/",
+    "position": "Frontend Lead",
+    "location": "Remote"
+  },
+  {
     "title": "Software Developer",
     "description": "Built mobile apps using React Native for Android and iOS. Developed company webapp and landing page using React and TailwindCSS. Improved app performance to 45MB size and 2-second startup time.",
     "tags": ["React", "React Native", "TailwindCSS"],
